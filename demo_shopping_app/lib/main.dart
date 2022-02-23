@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       ).copyWith(
         scaffoldBackgroundColor: Colors.white,
       ),
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }

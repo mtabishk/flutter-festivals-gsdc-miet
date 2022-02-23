@@ -71,7 +71,12 @@ class _HomePageState extends State<HomePage> {
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => DetailsPage(),
+                              builder: (context) => DetailsPage(
+                                assetPath:
+                                    "assets/images/${categories[_selectedIndex].toLowerCase()}/${categories[_selectedIndex].toLowerCase()}_" +
+                                        (index + 1).toString() +
+                                        ".jpg",
+                              ),
                             )),
                       )),
             ),
@@ -103,16 +108,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-            child: Text(
-              // products is out demo list
-              "Product Title",
-              style: TextStyle(color: kTextLightColor),
-            ),
-          ),
           Text(
-            "\$Price",
+            "\$100.00",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ],
