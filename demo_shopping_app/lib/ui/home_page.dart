@@ -191,6 +191,7 @@ class _HomePageState extends State<HomePage> {
                                         assetPath:
                                             _currentProducts[index].imageUrl,
                                         tag: tag.toString(),
+                                        price: _currentProducts[index].price,
                                       ),
                                     )),
                               );

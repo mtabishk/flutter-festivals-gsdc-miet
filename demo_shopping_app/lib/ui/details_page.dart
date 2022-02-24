@@ -7,9 +7,11 @@ class DetailsPage extends StatefulWidget {
     Key? key,
     required this.assetPath,
     required this.tag,
+    required this.price,
   }) : super(key: key);
   final String assetPath;
   final String tag;
+  final String price;
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();
@@ -92,7 +94,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
                     Text(
-                      "\$100.00",
+                      "\$" + widget.price,
                       style: TextStyle(
                         fontSize: 30.0,
                         fontWeight: FontWeight.bold,
