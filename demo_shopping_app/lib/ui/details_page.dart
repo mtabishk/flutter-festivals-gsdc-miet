@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_shopping_app/ui/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -5,8 +6,10 @@ class DetailsPage extends StatefulWidget {
   const DetailsPage({
     Key? key,
     required this.assetPath,
+    required this.tag,
   }) : super(key: key);
   final String assetPath;
+  final String tag;
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();
@@ -15,6 +18,15 @@ class DetailsPage extends StatefulWidget {
 class _DetailsPageState extends State<DetailsPage> {
   int _quantity = 0;
   bool _isFavorite = false;
+
+  Future<void> _getShoesDatabaseDetails() async {
+    final _refrence =
+        await FirebaseFirestore.instance.collection('shoes').get();
+    _refrence.docs.forEach((element) {
+      print(element.data());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // It provide us total height and width
@@ -27,13 +39,13 @@ class _DetailsPageState extends State<DetailsPage> {
           Stack(
             children: [
               Hero(
-                tag: widget.assetPath,
+                tag: widget.tag,
                 child: Container(
                   width: size.width,
                   height: size.width,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(widget.assetPath),
+                      image: NetworkImage(widget.assetPath),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -152,7 +164,8 @@ class _DetailsPageState extends State<DetailsPage> {
               height: 40.0,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                // onPressed: _getShoesDatabaseDetails,
+                onPressed: (() {}),
                 child: Text("BUY NOW"),
               ),
             ),

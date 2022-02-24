@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671641020196",
+    "project_id": "kiksstoredemo",
+    "storage_bucket": "kiksstoredemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671641020196:android:0ea8dc4a8e17372e1175b1",
+        "android_client_info": {
+          "package_name": "com.example.demo_shopping_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671641020196-eq7tj4n3aar84fpqunfabik3i0m96vag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz4Vq5DZJd2EZx7kFl8zoRlVqXCqdwToE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671641020196-eq7tj4n3aar84fpqunfabik3i0m96vag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
