@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: kDefaultPaddin),
                         child: GridView.builder(
-                            itemCount: snapshot.data?.docs.length,
+                            itemCount: 8,
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
