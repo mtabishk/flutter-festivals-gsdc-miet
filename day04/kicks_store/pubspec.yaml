@@ -1,4 +1,4 @@
-name: demo_shopping_app
+name: kicks_store
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -29,9 +29,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^1.12.0
-  cloud_firestore: ^3.1.8
-  cached_network_image: ^3.2.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -60,13 +57,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/nike/
-    - assets/images/adidas/
-    - assets/images/puma/
-    - assets/images/vans/
-    - assets/images/reebok/
-
-  #   - images/a_dot_ham.jpeg
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

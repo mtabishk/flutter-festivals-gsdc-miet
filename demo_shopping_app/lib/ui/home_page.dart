@@ -226,12 +226,7 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 height: 180,
                 width: 180,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  image: DecorationImage(
-                    image: NetworkImage(assetPath),
-                  ),
-                ),
+                child: Image.network(assetPath),
               ),
             ),
           ),
