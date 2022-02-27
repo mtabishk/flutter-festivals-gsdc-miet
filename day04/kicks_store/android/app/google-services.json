@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "241594172868",
+    "project_id": "kicksstoreapp",
+    "storage_bucket": "kicksstoreapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241594172868:android:95542a74b9a91ea0fa5091",
+        "android_client_info": {
+          "package_name": "com.example.kicks_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241594172868-55jr0et1cklq09m61n7btui3voo337oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0-ZVm-qlBG5wpfiK7ssnnJTssPwtt6JQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241594172868-55jr0et1cklq09m61n7btui3voo337oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
