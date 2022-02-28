@@ -1,6 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kicks_store/constants.dart';
+import 'package:kicks_store/details_page.dart';
 import 'package:kicks_store/products.dart';
 
 class HomePage extends StatefulWidget {
@@ -166,8 +168,23 @@ class _HomePageState extends State<HomePage> {
                                 _currentProducts = _reebokProducts;
                               }
                               return itemCard(
-                                  price: _currentProducts[index].price,
-                                  imageUrl: _currentProducts[index].imageUrl);
+                                price: _currentProducts[index].price,
+                                imageUrl: _currentProducts[index].imageUrl,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DetailsPage(
+                                              assetPath: _currentProducts[index]
+                                                  .imageUrl,
+                                              price:
+                                                  _currentProducts[index].price,
+                                              tag: _currentProducts[index]
+                                                  .imageUrl,
+                                            )),
+                                  );
+                                },
+                              );
                             }),
                       ),
                     ),
@@ -210,29 +227,33 @@ class _HomePageState extends State<HomePage> {
   Widget itemCard({
     required String price,
     required String imageUrl,
+    required Function() onPressed,
   }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Container(
-            height: 180,
-            width: 180,
-            child: Image.network(imageUrl),
-          ),
-        ),
-        SizedBox(height: 8.0),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Text(
-            "\$ " + price,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18.0,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Container(
+              height: 180,
+              width: 180,
+              child: CachedNetworkImage(imageUrl: imageUrl),
             ),
           ),
-        ),
-      ],
+          SizedBox(height: 8.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text(
+              "\$ " + price,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
