@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_shopping_app/ui/constants.dart';
 import 'package:demo_shopping_app/ui/details_page.dart';
@@ -226,7 +227,9 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 height: 180,
                 width: 180,
-                child: Image.network(assetPath),
+                child: CachedNetworkImage(
+                  imageUrl: assetPath,
+                ),
               ),
             ),
           ),
@@ -249,7 +252,8 @@ class _HomePageState extends State<HomePage> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
               categories[index],

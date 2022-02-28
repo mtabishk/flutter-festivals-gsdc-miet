@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_shopping_app/ui/constants.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: size.width,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(widget.assetPath),
+                      image: CachedNetworkImageProvider(widget.assetPath),
                       fit: BoxFit.contain,
                     ),
                   ),
