@@ -1,2 +1,3 @@
 # flutter-festivals-gsdc-miet
-![bg_flutter_festival](https://user-images.githubusercontent.com/61789893/155881418-5bc651e1-69a8-4cf6-b6e4-1947630a3c53.png)
+
+![kicks_store](https://user-images.githubusercontent.com/61789893/156133894-24048aa9-b2bd-4b85-8d42-b41b205c799b.png)
